@@ -10,7 +10,7 @@ load_dotenv()
 
 # 한국은행 Open API 설정
 API_KEY = os.getenv("EXCHANGE_RATE")
-BASE_URL = "https://ecos.bok.or.kr/api/StatisticSearch"
+BASE_URL = "https://oapi.koreaexim.go.kr/site/program/financial/exchangeJSON"
 FORMAT = "json"  # 응답 형식
 LANG = "kr"      # 언어
 START_COUNT = 1

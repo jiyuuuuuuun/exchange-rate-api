@@ -14,7 +14,7 @@ BASE_URL = "https://oapi.koreaexim.go.kr/site/program/financial/exchangeJSON"
 
 CURRENCY_CODES = {
     "미국 달러(USD)": "USD",
-    "일본 엔(JPY)": "JPY(100)",
+    "일본 엔(JPY(100))": "JPY(100)",
     "유로(EUR)": "EUR"
 }
 
@@ -37,8 +37,8 @@ def get_exchange(currency_name, currency_code, date_str):
         data = response.json()
 
         for item in data:
-            # 응답 JSON 구조에 맞게 필드명 확인 필요
-            if item.get("cur_unit") == currency_name.split('(')[1][:-1]:  # 예: "USD"
+            # currency_code와 직접 비교
+            if item.get("cur_unit") == currency_code:
                 value = item.get("deal_bas_r")
                 if value:
                     return f"{currency_name}: {value} 원"
@@ -50,6 +50,7 @@ def get_exchange(currency_name, currency_code, date_str):
         return f"{currency_name}: 요청 실패 ({e})"
     except ValueError:
         return f"{currency_name}: 응답 JSON 파싱 실패"
+
 
 def update_readme():
     """

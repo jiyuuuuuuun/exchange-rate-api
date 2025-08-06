@@ -13,9 +13,9 @@ API_KEY = os.getenv("EXCHANGE_RATE")
 BASE_URL = "https://oapi.koreaexim.go.kr/site/program/financial/exchangeJSON"
 
 CURRENCY_CODES = {
-    "미국 달러(USD)": "0000001",
-    "일본 엔(JPY)": "0000002",
-    "유로(EUR)": "0000003"
+    "미국 달러(USD)": "USD",
+    "일본 엔(JPY)": "JPY",
+    "유로(EUR)": "EUR"
 }
 
 README_PATH = "README.md"

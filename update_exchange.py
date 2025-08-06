@@ -11,13 +11,13 @@ load_dotenv()
 # 한국은행 Open API 설정
 API_KEY = os.getenv("EXCHANGE_RATE")
 BASE_URL = "https://oapi.koreaexim.go.kr/site/program/financial/exchangeJSON"
-FORMAT = "json"  # 응답 형식
-LANG = "kr"      # 언어
-START_COUNT = 1
-END_COUNT = 100
-STAT_CODE = "731Y001"  # 환율(매매 기준율) 통계표 코드
-CYCLE = "D"            # 일별 데이터
-TODAY = datetime.now().strftime("%Y-%m-%d  %H:%M:%S")  # 오늘 날짜
+# FORMAT = "json"  # 응답 형식
+# LANG = "kr"      # 언어
+# START_COUNT = 1
+# END_COUNT = 100
+# STAT_CODE = "731Y001"  # 환율(매매 기준율) 통계표 코드
+# CYCLE = "D"            # 일별 데이터
+TODAY = datetime.now().strftime("%Y%m%d")  # 오늘 날짜 "%Y-%m-%d  %H:%M:%S"
 CURRENCY_CODES = {
     "미국 달러(USD)": "0000001",
     "일본 엔(JPY)": "0000002",
@@ -31,18 +31,34 @@ def get_exchange(currency_name, currency_code):
     """
     한국은행 Open API를 호출하여 지정된 통화의 환율 정보를 가져오는 함수
     """
-    url = f"{BASE_URL}/{API_KEY}/{FORMAT}/{LANG}/{START_COUNT}/{END_COUNT}/{STAT_CODE}/{CYCLE}/{TODAY}/{TODAY}/{currency_code}"
-    response = requests.get(url)
+    params = {
+        "authkey": API_KEY,
+        "searchdate": TODAY,
+        "data": "AP01"  # 환율 데이터 타입, API 문서 기준
+    }
     
-    if response.status_code == 200:
+    try:
+        response = requests.get(BASE_URL, params=params)
+        response.raise_for_status()
         data = response.json()
-        try:
-            value = data['StatisticSearch']['row'][0]['DATA_VALUE']
-            return f"{currency_name}: {value} 원"
-        except (KeyError, IndexError):
-            return f"{currency_name}: 데이터를 찾을 수 없습니다."
-    else:
-        return f"{currency_name}: 요청 실패 (status {response.status_code})"
+        
+        # API가 여러 환율을 한번에 반환하면 currency_code에 맞춰 필터링
+        for item in data:
+            # 여기서 item 필드명은 예시이므로 실제 응답에 맞게 변경 필요
+            # 예를 들어 'cur_unit' 또는 'cur_cd' 같은 필드명일 수 있습니다.
+            if item.get("cur_unit") == currency_name.split('(')[1][:-1]:  # ex) "USD"
+                # 환율 정보 추출 (예: "deal_bas_r" 필드가 매매 기준율)
+                value = item.get("deal_bas_r")
+                if value:
+                    return f"{currency_name}: {value} 원"
+                else:
+                    return f"{currency_name}: 환율 정보가 없습니다."
+        return f"{currency_name}: 해당 통화 데이터가 없습니다."
+    
+    except requests.RequestException as e:
+        return f"{currency_name}: 요청 실패 ({e})"
+    except ValueError:
+        return f"{currency_name}: 응답 JSON 파싱 실패"
 
 def update_readme():
     """
@@ -50,7 +66,6 @@ def update_readme():
     """
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # 통화별 환율 정보 수집
     exchange_info = []
     for name, code in CURRENCY_CODES.items():
         info = get_exchange(name, code)
@@ -58,7 +73,6 @@ def update_readme():
     
     exchange_text = "\n> ".join(exchange_info)
 
-    # README.md 내용 구성
     readme_content = f"""
 # Exchange Rate API Status
 
@@ -73,7 +87,6 @@ def update_readme():
 자동 업데이트 봇에 의해 관리됩니다.
 """
 
-    # README.md 파일 쓰기
     with open(README_PATH, "w", encoding="utf-8") as file:
         file.write(readme_content)
 

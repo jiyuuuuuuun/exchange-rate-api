@@ -14,7 +14,7 @@ BASE_URL = "https://oapi.koreaexim.go.kr/site/program/financial/exchangeJSON"
 
 CURRENCY_CODES = {
     "미국 달러(USD)": "USD",
-    "일본 엔(JPY)": "JPY",
+    "일본 엔(JPY)": "JPY(100)",
     "유로(EUR)": "EUR"
 }
 

@@ -17,7 +17,7 @@ BASE_URL = "https://oapi.koreaexim.go.kr/site/program/financial/exchangeJSON"
 # END_COUNT = 100
 # STAT_CODE = "731Y001"  # 환율(매매 기준율) 통계표 코드
 # CYCLE = "D"            # 일별 데이터
-TODAY = datetime.now().strftime("%Y%m%d")  # 오늘 날짜 "%Y-%m-%d  %H:%M:%S"
+# TODAY = datetime.now().strftime("%Y%m%d")  # 오늘 날짜 "%Y-%m-%d  %H:%M:%S"
 CURRENCY_CODES = {
     "미국 달러(USD)": "0000001",
     "일본 엔(JPY)": "0000002",
@@ -33,7 +33,7 @@ def get_exchange(currency_name, currency_code):
     """
     params = {
         "authkey": API_KEY,
-        "searchdate": TODAY,
+        "searchdate": 20250805,
         "data": "AP01"  # 환율 데이터 타입, API 문서 기준
     }
     

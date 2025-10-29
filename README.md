@@ -11,7 +11,7 @@
 ## 📅 어제 환율 (2025-10-28)
 > 미국 달러(USD): 1,432.5 원
 > 일본 엔(JPY(100)): 937.75 원
-> 유로(EUR): 1,668.93 원
+> 유로(EUR): 요청 실패 (('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
 
 ---
 자동 업데이트 봇에 의해 관리됩니다.

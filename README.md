@@ -4,14 +4,14 @@
 이 리포지토리는 한국은행 Open API를 사용하여 주요 국가(미국, 일본, 유럽)의 환율 정보를 자동으로 업데이트합니다.
 
 ## 📅 오늘 환율 (2025-11-12)
-> 미국 달러(USD): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20251112&data=AP01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4c70ff8c0>: Failed to establish a new connection: [Errno 111] Connection refused')))
-> 일본 엔(JPY(100)): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20251112&data=AP01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4c6edafd0>: Failed to establish a new connection: [Errno 111] Connection refused')))
-> 유로(EUR): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20251112&data=AP01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4c6edb4d0>: Failed to establish a new connection: [Errno 111] Connection refused')))
+> 미국 달러(USD): 1,463.2 원
+> 일본 엔(JPY(100)): 949.33 원
+> 유로(EUR): 1,694.75 원
 
 ## 📅 어제 환율 (2025-11-11)
-> 미국 달러(USD): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20251111&data=AP01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4c6eda710>: Failed to establish a new connection: [Errno 111] Connection refused')))
-> 일본 엔(JPY(100)): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20251111&data=AP01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4c6edb250>: Failed to establish a new connection: [Errno 111] Connection refused')))
-> 유로(EUR): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20251111&data=AP01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4c6edb750>: Failed to establish a new connection: [Errno 111] Connection refused')))
+> 미국 달러(USD): 1,453.7 원
+> 일본 엔(JPY(100)): 943.26 원
+> 유로(EUR): 1,680.4 원
 
 ---
 자동 업데이트 봇에 의해 관리됩니다.

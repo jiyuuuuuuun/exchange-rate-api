@@ -5,7 +5,7 @@
 
 ## 📅 오늘 환율 (2026-09-02)
 > 미국 달러(USD): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20260902&data=AP01 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))))
-> 일본 엔(JPY(100)): 요청 실패 (('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+> 일본 엔(JPY(100)): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20260902&data=AP01 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))))
 > 유로(EUR): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20260902&data=AP01 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))))
 
 ## 📅 어제 환율 (2026-09-01)

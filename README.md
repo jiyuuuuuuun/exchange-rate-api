@@ -3,15 +3,15 @@
 
 이 리포지토리는 한국은행 Open API를 사용하여 주요 국가(미국, 일본, 유럽)의 환율 정보를 자동으로 업데이트합니다.
 
-## 📅 오늘 환율 (2026-10-28)
-> 미국 달러(USD): 1,324.3 원
-> 일본 엔(JPY(100)): 838.3 원
-> 유로(EUR): 1,473.81 원
+## 📅 오늘 환율 (2026-10-29)
+> 미국 달러(USD): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20261029&data=AP01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='oapi.koreaexim.go.kr', port=443) at 0x7f95700f86e0>, 'Connection to oapi.koreaexim.go.kr timed out. (connect timeout=None)')))
+> 일본 엔(JPY(100)): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20261029&data=AP01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='oapi.koreaexim.go.kr', port=443) at 0x7f95700674d0>, 'Connection to oapi.koreaexim.go.kr timed out. (connect timeout=None)')))
+> 유로(EUR): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20261029&data=AP01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='oapi.koreaexim.go.kr', port=443) at 0x7f95700679d0>, 'Connection to oapi.koreaexim.go.kr timed out. (connect timeout=None)')))
 
-## 📅 어제 환율 (2026-10-27)
-> 미국 달러(USD): 1,322.6 원
-> 일본 엔(JPY(100)): 839.83 원
-> 유로(EUR): 1,477.87 원
+## 📅 어제 환율 (2026-10-28)
+> 미국 달러(USD): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20261028&data=AP01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='oapi.koreaexim.go.kr', port=443) at 0x7f9570066c10>, 'Connection to oapi.koreaexim.go.kr timed out. (connect timeout=None)')))
+> 일본 엔(JPY(100)): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20261028&data=AP01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='oapi.koreaexim.go.kr', port=443) at 0x7f9570067750>, 'Connection to oapi.koreaexim.go.kr timed out. (connect timeout=None)')))
+> 유로(EUR): 요청 실패 (HTTPSConnectionPool(host='oapi.koreaexim.go.kr', port=443): Max retries exceeded with url: /site/program/financial/exchangeJSON?authkey=TMpgcNWjN7IP4vyNpyTPi4pLfoMbWzpV&searchdate=20261028&data=AP01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='oapi.koreaexim.go.kr', port=443) at 0x7f9570067c50>, 'Connection to oapi.koreaexim.go.kr timed out. (connect timeout=None)')))
 
 ---
 자동 업데이트 봇에 의해 관리됩니다.
